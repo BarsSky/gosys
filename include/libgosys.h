@@ -75,18 +75,60 @@ extern "C" {
 #endif
 
 
-// Импортированные функции указаны с заглавной буквы
-//
+/*
+	Функция проверки существования пути
+*/
 extern int check_Path(char* str);
+
+/*
+	Функция созлания файла
+*/
 extern int createFile(char* path);
+
+/*
+	Функция создания файла
+*/
 extern int makeDir(char* path);
+
+/*
+	Функция удаления Файла или пустого Каталога
+*/
 extern int removePath(char* str);
+
+/*
+	Функция удаления всего указаного пути
+*/
 extern int removeAllPath(char* str);
+
+/*
+	Функция получения текущего пути
+*/
 extern char* getWd(int* size);
+
+/*
+	Функция изменения имени текущего каталога
+*/
 extern int changeDir(char* str);
+
+/*
+	Функция запуска команды на исполнения в текущем каталоге
+*/
 extern char* addCommand(char* path);
+
+/*
+	Функция запуска команды с одним аргументом на исполнения в текущем каталоге
+*/
 extern char* addCommands(char* command, char* args1);
+
+/*
+	Функция смены текущего каталога для функций запуска команд
+*/
 extern void setDir(char* dir);
+
+/*
+Функция мониторина последней ошибки
+*/
+extern char* Check_Error();
 
 #ifdef __cplusplus
 }
