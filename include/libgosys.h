@@ -81,7 +81,7 @@ extern int check_Path(char* str);
 extern int createFile(char* path);
 extern int makeDir(char* path);
 extern int removePath(char* str);
-extern int removeAllInDir(char* str);
+extern int removeAllPath(char* str);
 extern char* getWd(int* size);
 extern int changeDir(char* str);
 extern char* addCommand(char* path);

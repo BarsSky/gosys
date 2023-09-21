@@ -35,7 +35,7 @@ func createFile(path *C.char) C.int {
 
 //export makeDir
 func makeDir(path *C.char) C.int {
-	err := os.MkdirAll(C.GoString(path), 075)
+	err := os.MkdirAll(C.GoString(path), 0777)
 	if err != nil {
 		return 0
 	}
@@ -51,8 +51,8 @@ func removePath(str *C.char) C.int {
 	return 1
 }
 
-//export removeAllInDir
-func removeAllInDir(str *C.char) C.int {
+//export removeAllPath
+func removeAllPath(str *C.char) C.int {
 	err := os.RemoveAll(C.GoString(str))
 	if err != nil {
 		return 0
